@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'ruby-pota-csv-to-adif'
+
+log_file = ::PotaCsvToAdif::LogFile.new(ARGV[0])
+log_file.convert
