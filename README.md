@@ -11,8 +11,6 @@ The basic flow:
 * Run this converter
 * Send the converted file to your regional POTA admin
 
-This converter is pretty simple, but follow the conventions and everything should be fine!
-
 ## Installation
 
 ### Prerequisites
@@ -37,13 +35,13 @@ This converter is pretty simple, but follow the conventions and everything shoul
     * SIG_INFO
     * STATION_CALLSIGN
 * Log contacts using the formats defined by the Parks on the Air documentation as this converter performs no validation or conversion of values. What you enter is what will come out!
-* Export the spreadsheet to CSV, naming it with the file-name format requested by your regional administrator (e.g., KJ7LOW@K-2850_20210221.csv) 
+* Export the spreadsheet to CSV, naming it with the filename format requested by your regional administrator (e.g., KJ7LOW@K-2850_20210221.csv) 
 * In a terminal window, run the converter, passing it the path to your CSV file
 * If no errors occur, the converted ADI file will now be in the same directory as the source CSV file 
 
 _Note: Other headers/columns may appear in your spreadsheet, but they will be ignored. If you want to include FREQUENCY for example, go right ahead. It won't be included in the final output. The final output is limited to only the fields that the POTA admins want to see._
 
-_Also note: The header MY_SIG is always `POTA`. You can include this column in your spreadsheet or not. It'll always appear s `POTA` in the final product._
+_Also note: The header MY_SIG is always `POTA`. You can include this column in your spreadsheet or not. It'll always appear as `POTA` in the final product._
 
 ### Example
 
