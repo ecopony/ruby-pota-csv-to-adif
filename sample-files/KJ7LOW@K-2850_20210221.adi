@@ -1,7 +1,7 @@
 ADIF Export from ruby-pota-csv-to-adif v[0.1]
 https://github.com/ecopony/ruby-pota-csv-to-adif
 Copyright (C) 2021 Edward Copony
-File generated on 27 Feb, 2021 at 07:36
+File generated on 07 Mar, 2021 at 08:32
 <ADIF_VER:5>3.1.0
 <PROGRAMID:21>ruby-pota-csv-to-adif
 <PROGRAMVERSION:3>0.1

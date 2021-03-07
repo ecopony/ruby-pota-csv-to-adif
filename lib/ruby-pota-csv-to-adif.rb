@@ -57,7 +57,7 @@ File generated on #{Time.now.getutc.strftime('%d %b, %Y at %I:%M')}
     end
 
     def field(name, row)
-      value = row[name]
+      value = row[name]&.strip
       return if value.nil?
       "<#{name.upcase}:#{value.size}>#{value} "
     end
