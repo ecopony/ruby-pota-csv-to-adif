@@ -1,4 +1,4 @@
-# Copyright (c) 2021 Edward Copony
+# Copyright (c) 2021-2022 Edward Copony
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -29,12 +29,12 @@ module PotaCsvToAdif
     def convert
       file = File.open(file_path)
       csv = CSV.new(file, headers: true)
-      adif_file = File.new("#{file_path[0...file_path.rindex('.')]}.adi", 'w')
+      File.open("#{file_path[0...file_path.rindex('.')]}.adi", 'w') do |adif_file|
+        adif_file.puts header
 
-      adif_file.puts header
-
-      csv.each do |row|
-        adif_file.puts "#{field('CALL', row)}#{field('QSO_DATE', row)}#{field('TIME_ON', row)}#{field('BAND', row)}#{field('MODE', row)}#{field('OPERATOR', row)}<MY_SIG:4>POTA #{field('MY_SIG_INFO', row)}#{field('SIG_INFO', row)}#{field('STATION_CALLSIGN', row)}<EOR>"
+        csv.each do |row|
+          adif_file.puts "#{field('CALL', row)}#{field('QSO_DATE', row)}#{field('TIME_ON', row)}#{field('BAND', row)}#{field('MODE', row)}#{field('OPERATOR', row)}<MY_SIG:4>POTA #{field('MY_SIG_INFO', row)}#{field('SIG_INFO', row)}#{field('STATION_CALLSIGN', row)}<EOR>"
+        end
       end
     end
 
@@ -44,13 +44,13 @@ module PotaCsvToAdif
 
     def header
       <<-ADIF_HEAD
-ADIF Export from ruby-pota-csv-to-adif v[0.1]
+ADIF Export from ruby-pota-csv-to-adif v[0.3]
 https://github.com/ecopony/ruby-pota-csv-to-adif
-Copyright (C) 2021 Edward Copony
+Copyright (C) 2021-2022 Edward Copony
 File generated on #{Time.now.getutc.strftime('%d %b, %Y at %I:%M')}
 <ADIF_VER:5>3.1.0
 <PROGRAMID:21>ruby-pota-csv-to-adif
-<PROGRAMVERSION:3>0.1
+<PROGRAMVERSION:3>0.3
 <EOH>
 
       ADIF_HEAD
