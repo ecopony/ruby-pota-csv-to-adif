@@ -1,10 +1,10 @@
-ADIF Export from ruby-pota-csv-to-adif v[0.3]
+ADIF Export from ruby-pota-csv-to-adif v[0.0.4]
 https://github.com/ecopony/ruby-pota-csv-to-adif
 Copyright (C) 2021-2022 Edward Copony
-File generated on 29 May, 2022 at 10:55
+File generated on 12 Aug, 2022 at 21:28
 <ADIF_VER:5>3.1.0
 <PROGRAMID:21>ruby-pota-csv-to-adif
-<PROGRAMVERSION:3>0.3
+<PROGRAMVERSION:3>0.0.4
 <EOH>
 
 <CALL:6>WA0RIM <QSO_DATE:8>20210221 <TIME_ON:4>2130 <BAND:3>20m <MODE:3>SSB <OPERATOR:6>KJ7LOW <MY_SIG:4>POTA <MY_SIG_INFO:6>K-2850 <STATION_CALLSIGN:6>KJ7LOW <EOR>

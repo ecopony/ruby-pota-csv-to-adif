@@ -44,13 +44,13 @@ module PotaCsvToAdif
 
     def header
       <<-ADIF_HEAD
-ADIF Export from ruby-pota-csv-to-adif v[0.3]
+ADIF Export from ruby-pota-csv-to-adif v[0.0.4]
 https://github.com/ecopony/ruby-pota-csv-to-adif
 Copyright (C) 2021-2022 Edward Copony
 File generated on #{Time.now.getutc.strftime('%d %b, %Y at %H:%M')}
 <ADIF_VER:5>3.1.0
 <PROGRAMID:21>ruby-pota-csv-to-adif
-<PROGRAMVERSION:3>0.3
+<PROGRAMVERSION:3>0.0.4
 <EOH>
 
       ADIF_HEAD
